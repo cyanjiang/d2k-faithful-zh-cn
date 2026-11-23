@@ -1,0 +1,510 @@
+﻿# d2k-faithful zh-cn seed translation table
+# Left column = EXACT English text as it appears in Data/UI_DATA/TEXT.UIB.
+# Right column = UTF-8 Chinese; "\n" becomes the game's 0xAC forced line break.
+# Empty right column = keep English. Generated drafts keep seed-only entries too.
+# This is original translation work; no text copied from other localisation patches.
+OK	确定
+Ok	确定
+Cancel	取消
+Yes	是
+No	否
+Back	返回
+Exit	退出
+Exit Game	退出游戏
+Quit	退出
+Continue	继续
+Continue..	继续..
+Continue2	继续..
+Proceed	继续
+Play	开始
+Start	开始
+Main Menu	主菜单
+Options Menu	选项菜单
+Single Player	单人游戏
+Multiplayer	多人游戏
+Multi Player	多人游戏
+Multiplayer Game	多人游戏
+Options	选项
+Load Game	载入游戏
+Save Game	保存游戏
+New Game	新游戏
+Start New Game	开始新游戏
+Restart	重新开始
+Restart Game	重新开始
+Briefing	任务简报
+Objective	任务目标
+Practice	练习
+Skirmish	遭遇战
+Skirmish Game	遭遇战
+House	家族
+Select House	选择家族
+Language	语言
+Music	音乐
+Sound	音效
+Sound Effects	音效
+Game Speed	游戏速度
+Scroll Speed	滚动速度
+Load	载入
+Load Mission	载入任务
+Save	保存
+Save Mission	保存任务
+Delete	删除
+Empty Slot	空存档位
+Empty slot	空存档位
+No Map Selected	未选择地图
+No map selected	未选择地图
+No Name	无名
+Computer	电脑
+Player	玩家
+Name	名称
+Score	得分
+Credits	资金
+Power	电力
+Spice	香料
+Victory	胜利
+Defeat	失败
+Mission Accomplished	任务完成
+Mission Failed	任务失败
+Atreides	亚崔迪
+Harkonnen	哈肯尼
+Ordos	奥多斯
+Fremen	弗雷曼人
+Sardaukar	萨督卡
+Saboteur	破坏者
+Emperor	皇帝
+Arrakis	厄拉科斯
+Sandworm	沙虫
+Harvester	采集车
+Carryall	运输机
+Ornithopter	扑翼机
+Death Hand	死亡之手
+MCV	移动建造车
+Engineer	工程师
+Infantry	步兵
+Trooper	重装步兵
+Thumper	震地器
+Trike	三轮车
+Quad	四轮炮车
+Tank	坦克
+Siege Tank	攻城坦克
+Sonic Tank	声波坦克
+Devastator	毁灭者
+Deviasator	毁灭者
+Construction Yard	建造厂
+Wind Trap	风力发电站
+Barracks	兵营
+Refinery	精炼厂
+Silo	香料罐
+Radar	雷达站
+Light Factory	轻工厂
+Heavy Factory	重工厂
+Repair Pad	修理平台
+Starport	星际港
+Palace	宫殿
+Outpost	前哨站
+Turret	炮塔
+Rocket Turret	火箭炮塔
+Wall	围墙
+Upgrade	升级
+Sell	出售
+Repair	修理
+Guard	守卫
+Attack	攻击
+Move	移动
+Stop	停止
+Deploy	展开
+Build	建造
+Place	放置
+The Emperor has granted you Arrakis.	皇帝已将厄拉科斯封赐给你。\n建立基地，开始采集香料。
+Build a base and harvest spice.	建立基地并采集香料。
+# --- main menu / setup flow (real 1.06 text.uib values) ---
+SELECT YOUR HOUSE	选择你的家族
+SELECT GAME TYPE	选择游戏类型
+SELECT MULTIPLAYER GAME	选择多人游戏
+SELECT SERIAL TYPE	选择串口类型
+GAME OPTIONS	游戏选项
+Game Options	游戏选项
+OPTIONS	选项
+LOAD MISSION	载入任务
+SAVE MISSION	保存任务
+SKIRMISH	遭遇战
+HEAD TO HEAD	一对一对战
+CO-OP	合作模式
+TEAM PLAY	团队作战
+MODEM/SERIAL	调制解调器／串口
+WESTWOOD ONLINE	西域在线
+WESTWOOD ONLINE LOBBY	西域在线大厅
+WESTWOOD GAME LOBBY	西域在线游戏大厅
+Enter Difficulty Level	选择难度等级
+Easy	简单
+Normal	普通
+Hard	困难
+Choose Language	选择语言
+English	英语
+French	法语
+German	德语
+Game Controls	游戏控制
+Abort Mission	放弃任务
+Abort	放弃
+Resume Mission	继续任务
+Are You Sure?	确定吗？
+Are you sure you want to abort the mission?	确定要放弃任务吗？
+Are you sure you want to restart the mission?	确定要重新开始任务吗？
+Are you sure you want to overwrite this game save?	确定要覆盖这个存档吗？
+Replay mission?	重玩本任务？
+Repeat	重播
+ReplayIntro	序章与预览
+Intro and Sneak Peek	序章与预览
+YOUR NAME	你的名字
+YOUR SIDE	你的阵营
+YOUR COLOR	你的颜色
+Unit Count	单位数量
+Tech Level	科技等级
+AI Players	电脑玩家数
+Crates	补给箱
+Worms	沙虫
+Players	玩家
+Team	队伍
+Side	阵营
+Reject	拒绝
+Choose	选择
+Type	类型
+Join	加入
+Host	创建主机
+New	新建
+Games	对局
+Players In Game	游戏中玩家
+Maps	地图
+MAP	地图
+Map : %s	地图：%s
+Score Preview	比分预览
+HOLD	等待
+READY	准备就绪
+Prev	上一页
+Next	下一页
+More	更多
+Send	发送
+Create	创建
+Accept	接受
+Retry	重试
+Register	注册
+Connect	连接
+Disconnect	断开连接
+Leave	离开
+Leave Chat	离开聊天
+Join Game	加入游戏
+Host Game	创建游戏
+Join Server	加入服务器
+Available servers	可用服务器
+Users	用户
+Password	密码
+Enter User Name and Password	输入用户名与密码
+Enter Game Password	输入游戏密码
+Join Private Game	加入私人游戏
+Hosting Game	正在主持游戏
+Public Game	公开对局
+Private Game	私人对局
+Select Public or Private Game	选择公开或私人对局
+Enter Chat Topic Name	输入聊天主题名称
+Dial	拨号
+Dial Now	立即拨号
+Answer	应答
+Joining Modem Game	正在加入调制解调器对局
+Hosting Modem Game	正在主持调制解调器对局
+Serial Game	串口对局
+Modem Game	调制解调器对局
+Internet	互联网
+Head To Head	一对一对战
+Co-Operative	合作模式
+Team Play	团队作战
+Waiting for other player	等待其他玩家
+Select Com Port	选择串口
+Setup Com Port	设置串口
+Enter Phone Number	输入电话号码
+Change to 8 bit Color	切换为 8 位色
+Change to 16 bit Color	切换为 16 位色
+8 Bit graphics	8 位图形
+16 Bit graphics	16 位图形
+Serial settings	串口设置
+Modem settings	调制解调器设置
+Phone Number	电话号码
+User Name	用户名
+Settings	设置
+Delete Mission	删除任务
+There are no saved games to choose from.	没有可选择的存档。
+Warning : No space on drive to save the game	警告：磁盘空间不足，无法保存游戏
+# --- in-game messages, objectives, score screen ---
+Airstrike ready.	空袭已就绪。
+Fremen Ready	弗雷曼人已就绪
+Saboteur Ready	破坏者已就绪
+Build a Wind Trap for power.	建造风力发电站以提供电力。
+Build a Refinery to collect Spice.	建造精炼厂来采集香料。
+Build a Silo to store additional Spice.	建造香料罐以储存更多香料。
+WARNING: Ixian transports detected.	警告：探测到伊克斯运输机。
+Enemy carryall drop detected!	探测到敌方运输机空投！
+Enemy reinforcements have arrived.	敌方增援已抵达。
+WARNING: Large force approaching!	警告：大股敌军正在逼近！
+Protect the Outpost from attack.	保护前哨站免受攻击。
+Contraband has arrived and been confiscated.	违禁品已抵达并被没收。
+Incoming hostile Mercenary force detected.	探测到来袭的敌方雇佣军。
+Smuggler refining facility detected nearby.	附近发现走私者精炼设施。
+Hostages Released!	人质已获救！
+Fremen base detected to the Southeast.	东南方向发现弗雷曼人基地。
+Choose a territory to attack..	选择要进攻的领土..
+The Harkonnen have been annihilated!	哈肯尼家族已被歼灭！
+The Ordos have been annihilated!	奥多斯家族已被歼灭！
+The Atreides have been annihilated!	亚崔迪家族已被歼灭！
+The Smugglers have been annihilated!	走私者已被歼灭！
+The Mercenaries have been annihilated!	雇佣军已被歼灭！
+The Fremen have been annihilated!	弗雷曼人已被歼灭！
+The Emperor has been annihilated!	皇帝军已被歼灭！
+The Atreides are now hostile!	亚崔迪家族现已转为敌对！
+The Harkonnen are now hostile!	哈肯尼家族现已转为敌对！
+The Ordos are now hostile!	奥多斯家族现已转为敌对！
+The Emperor is now hostile!	皇帝军现已转为敌对！
+The Fremen are now hostile!	弗雷曼人现已转为敌对！
+The Smugglers are now hostile!	走私者现已转为敌对！
+The Mercenaries are now hostile!	雇佣军现已转为敌对！
+Do you want to play House Atreides?	你要扮演亚崔迪家族吗？
+Do you want to play House Harkonnen?	你要扮演哈肯尼家族吗？
+Do you want to play House Ordos?	你要扮演奥多斯家族吗？
+ has been defeated.	已被击败。
+ has been eliminated from the game.	已被淘汰出局。
+ has left the game.	已离开游戏。
+ has retired from the game.	已退出游戏。
+ has lost network connection for this game.	已断开本局网络连接。
+has allied with	已与
+declares war on	向
+Neutral Unit	中立单位
+Neutral Structure	中立建筑
+Units destroyed	摧毁单位数
+Buildings destroyed	摧毁建筑数
+Spice harvested	采集香料量
+Your Score	你的得分
+Enemy Score	敌方得分
+Total	总计
+Yours	我方
+Enemy	敌方
+Casualties	伤亡
+Inflicted	造成
+Received	承受
+Buildings	建筑
+Destroyed	已摧毁
+Rank	军衔
+Total Score	总得分
+Practice Game Results	练习模式结果
+MULTIPLAYER RESULTS	多人游戏结果
+Player Names	玩家名称
+High Scores	最高分
+Rating	评级
+Mission	任务
+Won	胜
+Lost	负
+Points	积分
+Not ranked	未计分
+Ranked	已计分
+Sell Building	出售建筑
+Surrender	投降
+Retreat	撤退
+MapToggle	地图切换
+Harvested	已采集
+Crates on	补给箱：开
+Crates off	补给箱：关
+Worms off	沙虫：关
+Worms low	沙虫：少
+Worms medium	沙虫：中
+Worms high	沙虫：多
+Countdown .. %d seconds	倒计时 .. %d 秒
+seconds remaining	秒后开始
+Retrying .. %d seconds	正在重试 .. %d 秒
+Connection lost..	连接已断开。
+Game is out of sync	游戏不同步
+Only the host can change the options	只有主机可以修改选项
+A player has joined your game...	有玩家加入了你的游戏...
+Waiting for response from host	正在等待主机响应
+Waiting for another player to join...	正在等待其他玩家加入...
+Connecting players...	正在连接玩家...
+Connecting %d players	正在连接 %d 名玩家
+Found %d players	已找到 %d 名玩家
+Network Problem	网络故障
+Connection failed : Connection timed out.	连接失败：连接超时。
+Connection failed : Invalid user/password.	连接失败：用户名或密码无效。
+Connection failure : Game is out of sync	连接失败：游戏不同步
+Lost connection to the Westwood Online server	与西域在线服务器的连接已断开
+Connecting to Westwood Online	正在连接西域在线
+Sending game results to server	正在向服务器发送游戏结果
+Unable to ally.	无法结盟。
+You need to select a game session to join	请先选择要加入的对局
+That game is full	该对局已满
+Current topic:	当前主题：
+Topic Channels available	可用主题频道
+Game Channels available	可用游戏频道
+Chat Channels	聊天频道
+Game Channels	游戏频道
+Channels	频道
+Ladder	排行榜
+Find	查找
+Page	呼叫
+Action	动作
+Find User	查找用户
+Page User	呼叫用户
+Find/Page User	查找／呼叫用户
+Enter user name	输入用户名
+Enter message	输入消息
+User was not found	未找到该用户
+Find has failed	查找失败
+Page has failed	呼叫失败
+Page was successful	呼叫成功
+Connect	连接
+Connecting serial... Cancel to abort	正在连接串口... 取消可中止
+Modem dialing out... Cancel to abort	正在拨号... 取消可中止
+ESC - Toggle InGame Menu for Key List, Load/Save, Restart & Abort	ESC - 打开游戏内菜单（按键列表、载入／保存、重开与放弃）
+F1 - Frame Rate	F1 - 帧率
+F2 - Toggle Shroud on/off	F2 - 开关战争迷雾
+F3 - Show Tile Info & Grid	F3 - 显示地块信息与网格
+F4 - Toggle Fast & Slow shroud	F4 - 切换快速／慢速迷雾
+S - Toggle Stealth Mode on selected Unit	S - 切换所选单位的潜行模式
+Atreides High Tech Factory	亚崔迪高科技工厂
+Ornithopter	扑翼机
+Concrete	混凝土
+Object	物件
+Sietch	穴地
+NONAME	无名
+To all : 	对所有人：
+Game	游戏
+LAN	局域网
+Null Modem	零调制解调器
+Com Port	串口
+Microphone off	麦克风已关闭
+Microphone on	麦克风已开启
+Language filter is off	语言过滤器已关闭
+Language filter is on	语言过滤器已开启
+All games shown	显示所有对局
+Lobby games shown	仅显示大厅对局
+Find is enabled	查找已启用
+Find is disabled	查找已禁用
+Page is enabled	呼叫已启用
+Page is disabled	呼叫已禁用
+Incoming paging is enabled	允许接收呼叫
+Incoming paging is disabled	禁止接收呼叫
+You are in the channel...	你已进入该频道...
+You have joined the channel %s	你已加入频道 %s
+You left the channel %s	你已离开频道 %s
+Created the channel %s	已创建频道 %s
+User %s joined the channel	用户 %s 加入了频道
+User %s left the channel	用户 %s 离开了频道
+Player %s joined the game	玩家 %s 加入了游戏
+Player %s left the game	玩家 %s 离开了游戏
+Game Options	游戏选项
+Dune2000 Lobby	沙丘 2000 大厅
+Dune2000 Lobbies	沙丘 2000 大厅列表
+Tournament game	锦标赛对局
+Friendly game	友谊对局
+Download Finished	下载完成
+Downloading Patch	正在下载补丁
+Downloading file	正在下载文件
+Upgrade Needed. Download?	需要升级。是否下载？
+Upgrade Available. Download?	有可用升级。是否下载？
+Time Left	剩余时间
+Bytes	字节
+of	／
+GAME SETTINGS	游戏设置
+Game Settings	游戏设置
+SOUND SETTINGS	音效设置
+Sound Settings	音效设置
+MUSIC SELECTION	音乐选择
+Scroll Rate	滚动速度
+Music Volume	音乐音量
+SFX Volume	音效音量
+Done	完成
+Maximum	最大
+Minimum	最小
+Fastest	最快
+Slowest	最慢
+Grid Off	网格：关
+Grid On	网格：开
+Rotate Off	自动旋转：关
+Rotate On	自动旋转：开
+Help & Key List	帮助与按键列表
+Play Game	开始游戏
+SELECT MISSION	选择任务
+Mission 1	任务 1
+Mission 2	任务 2
+Mission 3	任务 3
+Mission 4	任务 4
+Mission 5	任务 5
+Mission 6	任务 6
+Mission 7	任务 7
+Mission 8	任务 8
+Mission 9	任务 9
+You Won The Mission	任务胜利
+You Lost The Mission	任务失败
+Mission Incomplete	任务未完成
+Loop	循环播放
+Single	单次播放
+Atreides Test Mission	亚崔迪测试任务
+Harkonnen Test Mission	哈肯尼测试任务
+Ordos Test Mission	奥多斯测试任务
+New Units	新增单位
+Westwood games	西木游戏
+Super Channels	超级频道
+Official Chat Channels	官方聊天频道
+User Chat Channels	用户聊天频道
+Chat Channels	聊天频道
+Dune 2000 Channels	沙丘 2000 频道
+Store login	保存登录信息
+Serial connection failed	串口连接失败
+Modem dial failed	调制解调器拨号失败
+WESTWOOD ONLINE SESSION	西域在线会话
+Language filter is turned off	语言过滤器已关闭
+Language filter is turned on	语言过滤器已开启
+You cannot ban yourself from the channel	你不能把自己踢出频道
+You cannot squelch the channel bots	你不能屏蔽频道机器人
+You cannot squelch yourself	你不能屏蔽自己
+You cannot accept yet	现在还不能接受
+The host has changed your handicap	主机已修改你的让分设置
+One of your buildings has been captured!	你的一座建筑已被占领！
+Cannot find the online registry program.	找不到在线注册程序。
+You have been banned from this channel.	你已被该频道封禁。
+You are no longer banned	封禁已解除
+User is in another game's lobby	该用户正在另一个游戏大厅
+User is in the Dune2000 lobby	该用户正在沙丘 2000 大厅
+User is not in a channel	该用户不在任何频道
+User is in the channel	该用户正在频道中
+User does not want to be found	该用户设置为不可查找
+User does not want to be disturbed	该用户设置为免打扰
+Returning to game menu	正在返回游戏菜单
+Draw game accepted	已接受和局
+Private tournament game	私人锦标赛对局
+Private friendly game	私人友谊对局
+Public tournament game	公开锦标赛对局
+Public friendly game	公开友谊对局
+User has accepted settings	该用户已接受设置
+User is the host	该用户是主机
+Easy handicap setting	简单让分
+Hard handicap setting	困难让分
+%s Playing %s	%s 使用 %s
+Light Infantry	轻步兵
+Combat Tank	战斗坦克
+Missile Tank	导弹坦克
+Airstrike	空袭
+Death Hand Missile	死亡之手导弹
+Thumper Infantry	震地器步兵
+Raider	突袭者
+Deviator	偏离者
+Frigate	护卫舰
+Gun Turret	机枪炮塔
+High Tech Factory	高科技工厂
+Ix Research Center	伊克斯研究中心
+Atreides Palace	亚崔迪宫殿
+Harkonnen Palace	哈肯尼宫殿
+Ordos Palace	奥多斯宫殿
+Emperor's Palace	皇帝宫殿
+Modified Outpost	改进型前哨站
+Unrevealed Terrain	未探明地形
+Enemy Unit	敌方单位
+Enemy Structure	敌方建筑
+Not Used	未使用
+Modem CallerID State	调制解调器来电显示状态
+Private tournament	私人锦标赛
+private	私人

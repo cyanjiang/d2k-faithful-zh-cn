@@ -1,0 +1,365 @@
+﻿# Additional Simplified Chinese translations, keyed by the exact English text
+# in TEXT.UIB. Generated/edited by hand; build_i18n.py merges this with seed.tsv.
+# "\n" in the right column becomes the game's 0xAC forced line break.
+# Left column must be byte-for-byte the English source; never edit it.
+
+# --- 联机 / 错误提示 ---
+Connection failed : This nickname is in use by another user.	连接失败：该昵称已被其他用户使用。
+You cannot kick yourself out of the channel	你不能把自己踢出频道
+Are you sure you want to overwrite this phone number?	确定要覆盖这个电话号码吗？
+Players failed to connect with each other.. Exiting game	玩家之间连接失败，即将退出游戏
+You need to enter a phone number before you can dial	拨号前需要先输入电话号码
+You may not build any more units or buildings at this time.	当前无法再建造更多单位或建筑。
+You have lost Westwood Online. Make sure your ISP connection is active.	与 Westwood 在线服务的连接已断开，请确认网络接入正常。
+Connection to Westwood Online failed. Check your ISP connection	连接 Westwood 在线服务失败，请检查网络接入
+There has been a problem with the network. You may try again	网络出现问题，可以重试
+You have to be in a channel to be able to Squelch users	只有进入频道后才能屏蔽用户
+You cannot Kick users unless you are in a channel you have created	只有在你创建的频道中才能踢出用户
+You cannot Ban users unless you are in a channel you have created	只有在你创建的频道中才能封禁用户
+You can only Leave when you are in a channel	只有进入频道后才能离开
+You have to be in User channels before you can Create a chat channel	必须先进入用户频道才能创建聊天频道
+Are you sure you want to leave Westwood Online?	确定要离开 Westwood 在线服务吗？
+Are you sure you want to launch the internet browser for Westwood Online Help?	确定要打开浏览器访问 Westwood 在线帮助吗？
+Are you sure you want to launch the internet browser for the Westwood Game Universe?	确定要打开浏览器访问 Westwood 游戏世界吗？
+Are you sure you want to launch the internet browser for the Dune2000 Ladder?	确定要打开浏览器访问《沙丘 2000》排行榜吗？
+Are you sure you want to leave the campaign map screen ?	确定要离开战役地图界面吗？
+You failed to find the host's game. Returning to main menu.	未能找到主机的游戏，正在返回主菜单。
+You failed to connect to the other players in the game. Returning to lobby.	未能连接其他玩家，正在返回大厅。
+You have lost connection to the game in progress. Returning to lobby.	与进行中游戏的连接已断开，正在返回大厅。
+You have banned the user %s from your channel	已将用户 %s 从你的频道封禁
+You have to select a channel to be able to join it	需要先选择一个频道才能加入
+You cannot change the handicap in a tournament game	锦标赛中不能更改让分设置
+You cannot have any AI players in a tournament game	锦标赛中不能有 AI 玩家
+You need to select a user to be able to kick them out of the channel	需要先选择用户才能将其踢出频道
+You need to select a user to be able to ban from your channel	需要先选择用户才能从频道封禁
+You will lose connection with the other player. Are you sure?	你将与其他玩家断开连接，确定吗？
+To start a game, you have to be in a Dune2000 lobby.	必须先进入《沙丘 2000》大厅才能开始游戏。
+Could not find all players for this game. Going into the game without them.	未能找齐本局所有玩家，将在缺少他们的情况下开始游戏。
+You have lost connection with one or more players	与一名或多名玩家的连接已断开
+You have lost connection with one of the players	与其中一名玩家的连接已断开
+Invalid CD found. Going back to the main menu.	检测到无效光盘，正在返回主菜单。
+..\Exit Westwood Online	..\退出 Westwood 在线服务
+Internet browser not detected. Could not launch the URL.	未检测到浏览器，无法打开该链接。
+The game has detected no usernames. Do you want to register a new name with Westwood?	未检测到用户名。要在 Westwood 注册新名字吗？
+You cannot browse the game ladder from game setup screens.	不能从游戏设置界面浏览排行榜。
+You cannot browse the Westwood Online help from game setup screens.	不能从游戏设置界面浏览 Westwood 在线帮助。
+You have been disconnected from the Westwood Online Chat Server	你已与 Westwood 在线聊天服务器断开连接
+You have entered an incorrect password for this game	本局游戏密码错误
+The channel you tried to join no longer exists.	尝试加入的频道已不存在。
+You have been banned from the channel you tried to join.	你已被试图加入的频道封禁。
+You cannot reply until somebody pages you in the game	只有有人在游戏中呼叫你之后才能回复
+Are you sure you want to remove the selected user name from the registry?	确定要从注册表中删除所选用户名吗？
+The user %s was kicked out of the channel %s by %s	用户 %s 被 %s 踢出了频道 %s
+You have been kicked out of the channel %s by %s	你被 %s 踢出了频道 %s
+You have been banned from the chat server	你已被聊天服务器封禁
+You need to enter a name for yourself before you can Join or Host a game	加入或建立游戏前需要先输入自己的名字
+The server has banned you until 	服务器已将你封禁至
+Player has not entered a name. Cannot start a game yet.	有玩家尚未输入名字，暂时无法开始游戏。
+One player needs to change their name. Cannot start a game yet.	有一名玩家需要改名，暂时无法开始游戏。
+Waiting for response... Disconnect to quit Westwood Online	正在等待响应……断开连接即可退出 Westwood 在线服务
+You need to wait for players to join and accept before starting a game	需等玩家加入并确认后才能开始游戏
+You need to select users you want to squelch	需要先选择要屏蔽的用户
+You need to enter a description string for the save file	需要为存档输入描述
+The Dune2000 CD is required for this game option	该游戏选项需要《沙丘 2000》光盘
+The Dune2000 CD is missing. Please replace it in the drive	未检测到《沙丘 2000》光盘，请放回光驱
+You have a different version of the game to the host. You can't join this game.	你的游戏版本与主机不同，无法加入该游戏。
+Offering the other player a draw. Press D to withdraw offer.	正在向对方提出和局。按 D 撤回提议。
+Offered a draw from the other player. Press D to accept offer.	对方提出和局。按 D 接受。
+Sending game results to server. Inconsistency in data.	正在向服务器发送战果，数据不一致。
+Need to wait for MentatBot to welcome you to this channel before you can host a game.	需等待门泰特机器人欢迎你进入该频道后才能建立游戏。
+To avoid being rushed, start with maximum units and/or choose a medium-large map	为避免被速攻，请以最大初始兵力开始并/或选择中大型地图
+Normal handicap setting	标准让分设置
+Failed to create the game channel. Please try again.	创建游戏频道失败，请重试。
+Welcome to the Westwood chat test server.	欢迎来到 Westwood 聊天测试服务器。
+The name you have chosen is already used by another player	你选择的名字已被其他玩家使用
+There has been a problem with the network	网络出现问题
+
+# --- 鼠标提示 tooltip ---
+Kick a user out of your game channel.	将用户踢出你的游戏频道。
+Create a new chat/game channel	创建新的聊天／游戏频道
+Browse Dune 2000 Ladder	浏览《沙丘 2000》排行榜
+Ban user(s) from your channel	将用户从你的频道封禁
+Toggle bad language filter on/off	开关不良语言过滤器
+Show Westwood Online Help	显示 Westwood 在线帮助
+Toggle between number of people/channel latency	在人数／频道延迟之间切换
+Go back a level.	返回上一级。
+Go to Home Channel.	前往主频道。
+Action message.	动作消息。
+Leave Westwood Online.	离开 Westwood 在线服务。
+Create a new Chat Channel.	创建新的聊天频道。
+Join a Chat or Game Channel.	加入聊天或游戏频道。
+Refresh current Channel List.	刷新当前频道列表。
+Disable/Enable incoming messages from user(s).	屏蔽／恢复来自用户的消息。
+Find/Page users.	查找／呼叫用户。
+Leave the Channel you are currently in.	离开当前所在频道。
+Kick a user from your Channel.	将用户踢出你的频道。
+Start an Internet game.	开始一局互联网游戏。
+Inform host that the current game settings are ok.	告知主机当前游戏设置无误。
+Westwood Online options	Westwood 在线选项
+Set number of starting units	设置初始单位数量
+Set technology level	设置科技等级
+Set starting solaris	设置初始太阳币
+Set number of AI players	设置 AI 玩家数量
+Set crates	设置补给箱
+Set worm frequency	设置沙虫出现频率
+Select House Atreides	选择亚崔迪家族
+Select House Harkonnen	选择哈肯尼家族
+Select House Ordos	选择奥多斯家族
+Select color	选择颜色
+Select a map	选择地图
+Host a game	建立游戏
+Join a game	加入游戏
+Go back to the previous screen	返回上一界面
+Start the game	开始游戏
+Accept the host settings	接受主机设置
+Reject a player from your game	将玩家从你的游戏中排除
+Load a saved practice game	载入已保存的练习游戏
+Enter your name	输入你的名字
+Easy difficulty setting	简单难度
+Normal difficulty setting	普通难度
+Hard difficulty setting	困难难度
+
+# --- 地图名 ---
+Habbanya Ridge (SM 2 player)	哈巴尼亚山脊（小型·2 人）
+Tuono Basin (SM 2 player)	托诺盆地（小型·2 人）
+Chin Rock (SM 2 player)	钦岩（小型·2 人）
+Gara Kulon (SM 2 player)	加拉库隆（小型·2 人）
+Cave of Riches (SM 2 player)	财富之穴（小型·2 人）
+Mount Idaho (SM 2 player)	爱达荷山（小型·2 人）
+Pasty Mesa (SM 2 player)	帕斯蒂台地（小型·2 人）
+Broken Land (SM 2 player)	破碎之地（小型·2 人）
+OH Gap (SM 2 player)	OH 峡谷（小型·2 人）
+Observatory Mt. (SM 2 player)	观星山（小型·2 人）
+Sihaya Ridge (SM 2-3 player)	西哈亚山脊（小型·2-3 人）
+The Minor Erg (MED 2-4 player)	小沙海（中型·2-4 人）
+Tsimpo (MED 2-4 player)	钦波（中型·2-4 人）
+Sietch Tabr (MED 2-4 player)	塔布尔穴地（中型·2-4 人）
+Tuck's Sietch (MED 2-4 player)	塔克穴地（中型·2-4 人）
+Red Chasm (MED 2-4 player)	赤红裂谷（中型·2-4 人）
+Hagga Basin (MED 2-4 player)	哈加盆地（中型·2-4 人）
+Harg Pass (MED 2-4 player)	哈格山口（中型·2-4 人）
+Arakeen (LRG 4-6 player)	阿拉肯（大型·4-6 人）
+Carthag (LRG 4-5 player)	卡萨格（大型·4-5 人）
+The Funeral Plain (XL 6 player)	葬礼平原（超大型·6 人）
+Cave of Birds (XL 6 player)	群鸟之穴（超大型·6 人）
+The Great Flat (XL 6 player)	大平原（超大型·6 人）
+Habbanya Erg (XL 6 player)	哈巴尼亚沙海（超大型·6 人）
+The Shield Wall (XL 6 player)	盾墙（超大型·6 人）
+The Imperial Basin (XL 6 player)	帝国盆地（超大型·6 人）
+Jacarutu (SM 2 player)	雅卡鲁图（小型·2 人）
+Fondak (SM 2 player)	丰达克（小型·2 人）
+Seitch Shuloch (SM 2 player)	舒洛赫穴地（小型·2 人）
+Mount Irulan (SM 2 player)	伊如兰山（小型·2 人）
+Halleck's Ridge (MED 2-4 player)	哈莱克山脊（中型·2-4 人）
+Baron's Court (MED 2-4 player)	男爵庭院（中型·2-4 人）
+Leto's Erg (MED 2-4 player)	雷托沙海（中型·2-4 人）
+Mauddib's Cave (LRG 4-6 player)	穆阿迪布之穴（大型·4-6 人）
+Thufir's Point (LRG 4-6 player)	杜菲角（大型·4-6 人）
+Tenaya (XL 6 player)	特纳亚（超大型·6 人）
+
+# --- 曲目名 ---
+Attack on Arrakis	进攻厄拉科斯
+The Atreides Gain	亚崔迪的进益
+Enter the Ordos	进入奥多斯
+Fight For Power	为权力而战
+The Fremen	弗雷曼人
+Harkonnen Battle	哈肯尼之战
+Land of Sand	沙之国
+Robotix	机械军团
+Rise of Harkonnen	哈肯尼崛起
+Spice Scouting	香料侦察
+Under Construction	建造中
+The Waiting Game	等待游戏
+The Soldiers Approach	士兵逼近
+Plotting	密谋
+The Ambush	伏击
+
+# --- 联机军衔 ---
+Sand Flea	沙蚤
+Sand Snake	沙蛇
+Desert Mongoose	沙漠猫鼬
+Sand Warrior	沙丘战士
+Dune Trooper	沙丘骑兵
+Squad Leader	小队长
+Outpost Commander	前哨指挥官
+Base Commander	基地指挥官
+Warlord	军阀
+Chief Warlord	大军阀
+Ruler of Arrakis	厄拉科斯统治者
+
+# --- 联机大厅家族名 ---
+Alman	阿尔曼
+Corrino	科里诺
+Kenric	肯里克
+Wallach	瓦拉赫
+Marmusetz	马穆塞茨
+Wikkheiser	维克海瑟
+Kyzyl	克孜勒
+Ophelion	奥菲利昂
+Qair	凯尔
+Delambre	德朗布尔
+Ezharian	埃扎里安
+Hajus	哈尤斯
+Moritani	莫里塔尼
+Clanricarde	克兰里卡德
+Forbino	福尔比诺
+Ginaz	吉纳兹
+Hybla	海布拉
+Morotai	莫罗泰
+Pastran	帕斯特兰
+Pinang	皮南
+Thorgod	托尔戈德
+Tombe	通贝
+Turenne	蒂雷纳
+Bagrationi	巴格拉季昂
+Ispartha	伊斯帕尔塔
+Medvedev	梅德韦杰夫
+Penchi	彭奇
+Togramah	托格拉马
+Ludvonga	卢德冯加
+Burgerish	布尔格里什
+Chlemnik	赫莱姆尼克
+
+# --- 任务内事件提示 ---
+Upgrade barracks and light factory to produce more advanced units.	升级兵营与轻工厂以生产更先进的单位。
+High Tech Factory rebuilt! Expect further Imperial reinforcements!	高科技工厂已重建！预计帝国增援即将到来！
+High Tech Factory neutralized! Atreides temporarily cut off from Imperial reinforcement!	高科技工厂已被瘫痪！亚崔迪暂时失去帝国增援！
+Capture the Atreides Starport to receive an MCV.	占领亚崔迪星际港可获得一辆机动建造车。
+Destroy Atreides High Tech Factory to cut off Atreides from Imperial reinforcements.	摧毁亚崔迪高科技工厂，切断其帝国增援。
+Leader Captured: Mercenaries have been persuaded to fight with House Harkonnen.	首领已被俘：雇佣兵已被说服为哈肯尼家族而战。
+Atreides Commander: We cannot stand against the Harkonnen. We must become neutral.	亚崔迪指挥官：我们无法抵挡哈肯尼，必须转为中立。
+Build a concrete foundation before placing your buildings.	放置建筑前先铺设混凝土地基。
+Fremen Leader : Harkonnen units approaching!	弗雷曼首领：哈肯尼部队正在逼近！
+Smuggler Leader : Stay away from our Starport.	走私者首领：离我们的星际港远点。
+Smuggler Leader : For this you will be destroyed!	走私者首领：为此你们必须被消灭！
+Smuggler Leader : You were warned. Now you will pay.	走私者首领：已经警告过你们，现在付出代价吧。
+Capture the Smuggler Starport and confiscate the contraband.	占领走私者星际港并没收违禁品。
+Smuggler contraband has arrived. It is too late to confiscate.	走私违禁品已经运抵，来不及没收了。
+Capture the Harkonnen Barracks to release the hostages.	占领哈肯尼兵营以解救人质。
+WARNING: Harkonnen not retreating.  It is a trap!	警告：哈肯尼并未撤退，这是个陷阱！
+WARNING: Fremen concentrations spotted to the North and Southwest.	警告：北方与西南方发现弗雷曼人集结。
+WARNING: Imperial ships penetrating defense grid!	警告：帝国舰船正在突破防御网！
+Deliveries beginning to arrive. Massive reinforcements expected!	运输已开始抵达，预计将有大规模增援！
+Mercenary Leader: We're losing too many men!	雇佣兵首领：我们损失太大了！
+Mercenary Leader: We've lost too many men. We must withdraw our support!	雇佣兵首领：我们伤亡过重，必须撤回支援！
+<shouted>	<喊话>
+..\Exit Channel	..\退出频道
+Stealth Raider	隐形突击者
+Grenadier	掷弹兵
+paged	已呼叫
+NOTE: This is not the final version of the game.	注意：这不是游戏的最终版本。
+(C) 1997-1998 Westwood Studios, All rights reserved	版权所有 (C) 1997-1998 Westwood Studios，保留所有权利
+F6 - Show Range of Selected Unit (NB - This slows game)	F6 - 显示所选单位射程（注意：会降低游戏速度）
+Click on the map region to play a real mission or	点击地图区域进行正式任务，或
+on Play Game to play the test mission	点击「开始游戏」进行测试任务
+ENG	英语
+
+# --- 片尾字幕：职位与说明（人名按惯例保留原文） ---
+DUNE 2000	沙丘 2000
+Dune 2000 was jointly developed by	《沙丘 2000》由以下团队联合开发
+Westwood Studios and	Westwood Studios 与
+EXECUTIVE PRODUCER 	执行制片人
+PRODUCER 	制片人
+ASSOCIATE PRODUCER 	副制片人
+DIRECTOR OF DEVELOPMENT 	开发总监
+TECHNICAL DIRECTION 	技术指导
+PROGRAMMING	程序设计
+ADDITIONAL PROGRAMMING	额外程序设计
+ART	美术
+MAP DESIGNER	地图设计
+AUDIO DIRECTION 	音频指导
+ORIGINAL SOUNDTRACK 	原声音乐
+INGAME VOICES 	游戏内配音
+QA DIRECTION	测试指导
+QUALITY ASSURANCE 	质量保证
+CAST 	演员表
+THE ATREIDES MENTAT NOREE MONEO 	亚崔迪门泰特 诺里·莫尼奥
+THE BENE GESSERIT LADY ELARA 	贝尼·杰瑟里特女士 艾拉拉
+THE ORDOS MENTAT EDRIC O 	奥多斯门泰特 埃德里克·O
+THE HARKONNEN MENTAT HAYT DE VRIES 	哈肯尼门泰特 海特·德·弗里斯
+THE FREMEN KARI 	弗雷曼人 卡丽
+THE PADISHAH EMPEROR FREDERICK IV 	帕迪沙皇帝 腓特烈四世
+THE IMPERIAL GENERAL 	帝国将军
+THE ORDOS SERVICEMAN SPY 	奥多斯军人间谍
+THE HARKONNEN MEDIC 	哈肯尼军医
+THE BARON HARKONNEN 	哈肯尼男爵
+THE ORDOS SABOTEUR 	奥多斯破坏者
+THE FREMEN TROOPS 	弗雷曼部队
+DRAMATIC ASSETS AND PRODUCTION	剧情素材与制作
+DRAMATIC PRODUCTION	剧情制作
+DRAMATIC DIRECTION	剧情导演
+SCREENPLAY 	剧本
+DRAMATIC ASSISTANCE	剧情协助
+COMPOSITING	画面合成
+MOTION CAPTURE EDITING	动作捕捉剪辑
+SPECIAL FOOTAGE COURTESY OF UNIVERSAL STUDIOS	特别影像由环球影业提供
+BOX AND MANUAL DESIGN 	包装与说明书设计
+SPECIAL THANKS TO:	特别鸣谢：
+Elliot Lederman and Universal Studios	Elliot Lederman 与环球影业
+Blur Studios for great intro and win movies:	感谢 Blur Studios 制作精彩的开场与胜利影片：
+Creative Dynamics for logos	感谢 Creative Dynamics 设计标志
+For excellent work on the movie production:	感谢影片制作的出色工作：
+The Effects Network	The Effects Network
+and most of all,	最要感谢的是
+very special thanks to	特别致敬
+the original Dune 2: The Battle for Arrakis team	《沙丘 2：厄拉科斯之战》原班团队
+and all the Asps of the Desert	以及所有沙漠之蝰
+Copyright Notice	版权声明
+Copyright (c)1998 Westwood Studios	版权所有 (c) 1998 Westwood Studios
+All rights reserved.	保留所有权利。
+Dune 2000	沙丘 2000
+SHAI-HULUD!	沙伊-胡鲁德！
+
+# --- 首次运行安装向导（重实现自绘界面，不在 TEXT.UIB 中） ---
+DUNE 2000  -  GAME DATA SETUP	《沙丘 2000》 - 游戏数据安装
+This game plays from the files of your own Dune 2000 (US) CD.	本游戏需要你自己的《沙丘 2000》(美版) 光盘中的文件。
+Add your CD image, your CD drive (or a folder with its files)	请添加光盘镜像、光驱（或包含光盘文件的文件夹），
+or your installed Dune 2000 folder, and the official 1.06 patch.	或已安装的《沙丘 2000》目录，以及官方 1.06 补丁。
+Everything is checked and copied once into the game's own folder.	所有文件校验后只会复制一次到游戏自身目录。
+Add CD image (.iso)	添加光盘镜像 (.iso)
+Add CD drive or folder	添加光驱或文件夹
+Add patch d2k106us.exe	添加补丁 d2k106us.exe
+Sources	数据源
+none yet	尚未添加
+Everything is here. Press Install.	文件已齐备，点击「安装」。
+Still needed:	仍缺少：
+Esc stops.	按 Esc 中止。
+Install	安装
+Quit	退出
+Stop	停止
+The game data folder is not usable: 	游戏数据目录不可用：
+ is already added.	已经添加过了。
+Reading 	正在读取
+ has none of the files still needed.	中没有仍需的文件。
+ files found.	个文件已找到。
+Reading the files next to the game	正在读取游戏同级目录中的文件
+Read the files next to the game.	已读取游戏同级目录中的文件。
+Installing	正在安装
+Installed.	安装完成。
+Install stopped. Nothing was changed.	安装已中止，未做任何更改。
+Stopped.	已停止。
+ files	个文件
+Game files  	游戏文件  
+CD image	光盘镜像
+Dune 2000 patch	《沙丘 2000》补丁
+All files	所有文件
+
+# --- 联机动态拼接 ---
+'s Game	的游戏
+
+# --- 显示设置向导（重实现自绘界面，不在 TEXT.UIB 中） ---
+DUNE 2000  -  DISPLAY SETUP	《沙丘 2000》 - 显示设置
+Choose how the game fills the screen. Changes preview immediately.	选择游戏的显示方式，更改会立即预览。
+Display mode	显示模式
+Windowed	窗口模式
+Fullscreen	全屏模式
+Resolution	分辨率
+Desktop default	桌面默认分辨率
+CRT 4:3 (classic)	CRT 4:3（经典）
+Square pixels 16:10	方形像素 16:10
+Aspect ratio	画面比例
+Current: 	当前设置：
+Press F11 in game to toggle fullscreen at any time.	游戏中随时按 F11 切换全屏。
+Settings are saved to settings.ini; no command line needed.	设置保存到 settings.ini，无需命令行。
+Save & Start	保存并开始
+Save & Quit	保存并退出

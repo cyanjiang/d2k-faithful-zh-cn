@@ -1,0 +1,34 @@
+# Original game data: NEVER commit (see CLAUDE.md §3)
+*.iso
+*.zip
+d2k106us.exe
+/gamedata/
+*.R8
+*.R16
+*.VQA
+*.AUD
+*.MAP
+*.MIS
+*.DAT
+
+# Build / tool output
+/build/
+/build_st/
+/out/
+/preview/
+
+# Localisation: the bitmap font is rendered from a font installed on the
+# user's machine and must not be redistributed (see I18N.md).
+/i18n/*/font.ckf
+__pycache__/
+*.pyc
+/re/ghidra-project/
+/re/exports/
+/screenshots/
+
+# Local reference install of the original game (never committed)
+/reference/
+d2k-trace.log
+
+# Claude Code helper worktrees
+.claude/worktrees/

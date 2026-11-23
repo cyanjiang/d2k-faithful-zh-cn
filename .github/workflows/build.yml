@@ -1,0 +1,48 @@
+# Build and test on Windows (MSVC) and Linux (GCC, in tools/ci/linux.Dockerfile).
+# No game data is available here: the golden tests skip themselves; the
+# format, setup and simulation unit tests still run.
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v5
+      - name: Configure
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+      - name: Build
+        run: cmake --build build --config Release --parallel
+      - name: Test
+        env:
+          SDL_AUDIO_DRIVER: dummy
+          SDL_VIDEO_DRIVER: dummy
+        run: build/bin/Release/d2k_tests.exe
+      - name: Package
+        working-directory: build
+        run: |
+          cpack -G ZIP -C Release
+          cmake --build . --target source_package
+      - uses: actions/upload-artifact@v6
+        with:
+          name: d2k-windows
+          path: |
+            build/packages/*.zip
+
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build environment
+        run: docker build -t d2k-linux -f tools/ci/linux.Dockerfile tools/ci
+      - name: Build, test and package
+        run: |
+          mkdir -p build
+          docker run --rm -v "$PWD:/src:ro" -v "$PWD/build:/build" d2k-linux
+      - uses: actions/upload-artifact@v6
+        with:
+          name: d2k-linux
+          path: build/packages/*.tar.gz
