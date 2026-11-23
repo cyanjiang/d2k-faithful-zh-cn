@@ -48,12 +48,19 @@ def default_font():
     return None
 
 
-def render(chars, font_path, size, cell, advance, baseline, offset):
+def render(chars, font_path, size, cell, advance, baseline, offset, weight=None):
     try:
         from PIL import Image, ImageDraw, ImageFont
     except ImportError:
         raise SystemExit("Pillow is required: python -m pip install pillow")
     font = ImageFont.truetype(font_path, size)
+    if weight:
+        # Variable fonts (e.g. Noto Sans SC) expose named weights; pick one
+        # so distributed bitmaps are readable at 16px instead of hairline Thin.
+        try:
+            font.set_variation_by_name(weight)
+        except Exception:
+            pass  # static font: ignore the requested weight
     out = []
     for ch in chars:
         img = Image.new("L", (cell, cell), 0)
@@ -74,6 +81,7 @@ def main():
     ap.add_argument("--advance", type=int, default=14, help="pen advance for each glyph")
     ap.add_argument("--baseline", type=int, default=0, help="extra y offset when drawing")
     ap.add_argument("--offset", type=int, default=1, help="text inset inside the cell")
+    ap.add_argument("--weight", default=None, help="named variation for variable fonts (e.g. Medium, Regular)")
     args = ap.parse_args()
 
     chars = collect_chars(args.strings)
@@ -82,7 +90,7 @@ def main():
     font_path = args.font or default_font()
     if not font_path or not Path(font_path).is_file():
         raise SystemExit("no CJK font found; pass --font <path-to-ttf>")
-    glyphs = render(chars, font_path, args.size, args.cell, args.advance, args.baseline, args.offset)
+    glyphs = render(chars, font_path, args.size, args.cell, args.advance, args.baseline, args.offset, args.weight)
 
     buf = bytearray(MAGIC)
     buf += struct.pack("<HHHH", args.cell, args.cell, args.baseline, 0)

@@ -220,6 +220,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "i18n/zh-cn/strings.tsv"))
     ap.add_argument("--ckf", default=str(ROOT / "i18n/zh-cn/font.ckf"))
     ap.add_argument("--font", default=None)
+    ap.add_argument("--weight", default=None, help="named variation for variable fonts (e.g. Medium)")
     ap.add_argument("--check", action="store_true", help="only verify the pack")
     args = ap.parse_args()
 
@@ -245,6 +246,8 @@ def main():
            "--out", str(ckf)]
     if args.font:
         cmd += ["--font", args.font]
+    if args.weight:
+        cmd += ["--weight", args.weight]
     r = subprocess.run(cmd, cwd=str(ROOT))
     if r.returncode != 0:
         return r.returncode

@@ -236,6 +236,26 @@ taught us is in `docs/lessons-learned.md`.
 The project was developed with the help of Claude Code, an AI coding
 assistant; `CLAUDE.md` holds the working rules it followed.
 
+## Acknowledgements
+
+The localisation approach — leave the original files untouched, keep
+translations external, and draw CJK text with a self-rendered bitmap font —
+was informed by [`ChenKe404/SUN_I18N`](https://github.com/ChenKe404/SUN_I18N),
+an internationalisation patch for *Command & Conquer: Tiberian Sun* 2.03.
+It demonstrated a complete solution to the same class of problems this game
+has (single-byte code pages, fixed-size strings, text baked into sprites):
+external loading, original-text lookup and substitution, self-drawn CJK fonts,
+and a separate asset repository. SUN_I18N's hooks are bound to the TS 2.03
+binary and cannot be ported directly; this project is an independent
+implementation on top of the open-source d2k-faithful reimplementation and
+contains none of its code. Its translation/font asset repo is
+[`SUN_I18N_Assets`](https://github.com/ChenKe404/SUN_I18N_Assets).
+
+Terminology also follows common community usage; the OpenRA Dune 2000
+Simplified Chinese localisation served as one reference. The Chinese font
+bundled in the official Windows release package is generated from
+**Noto Sans SC** (SIL OFL 1.1).
+
 ## Legal
 
 d2k-faithful is free software under the GNU General Public License v3.0

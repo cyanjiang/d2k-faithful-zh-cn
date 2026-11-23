@@ -16,6 +16,7 @@ d2k106us.exe
 /build_st/
 /out/
 /preview/
+/release-pack/
 
 # Localisation: the bitmap font is rendered from a font installed on the
 # user's machine and must not be redistributed (see I18N.md).

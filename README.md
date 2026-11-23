@@ -185,6 +185,18 @@ SDL3 和 doctest 以固定版本从源码获取。需要游戏数据的测试会
 
 本项目在开发过程中使用了 AI 编程助手 Claude Code；[`CLAUDE.md`](CLAUDE.md) 记录了其遵循的工作规范。
 
+## 参考与致谢
+
+汉化路线（不改原版文件 + 外置译文 + 自绘点阵中文字库）参考了
+[`ChenKe404/SUN_I18N`](https://github.com/ChenKe404/SUN_I18N)——针对《命令与征服：泰伯利亚之日》
+2.03 的国际化补丁。它验证了"外挂加载、原文查表替换、自绘中文字库、译文资源分仓"的完整解法，
+与本作面临的老引擎单字节码表、定长字符串、贴图文字等难题高度相似，是本分支最重要的架构参考。
+SUN_I18N 的实现绑定 TS 2.03 二进制、无法直接移植；本项目是在开源重实现 d2k-faithful 上的独立实现，
+未复制其代码。其译文/字库资源仓见 [`SUN_I18N_Assets`](https://github.com/ChenKe404/SUN_I18N_Assets)。
+
+此外，术语译名参考了社区通行译法；相关项目如 OpenRA 的《沙丘 2000》简体中文本地化亦提供了术语基线。
+官方 Windows 构建包中的中文字库由 **Noto Sans SC**（SIL OFL 1.1）生成。
+
 ## 法律声明
 
 d2k-faithful 依据 GNU General Public License v3.0 发布（见 [`LICENSE`](LICENSE)），
@@ -192,8 +204,9 @@ d2k-faithful 依据 GNU General Public License v3.0 发布（见 [`LICENSE`](LIC
 本项目与 Electronic Arts、Westwood Studios 或 Intelligent Games 无隶属或背书关系。
 《沙丘 2000》及其内容归权利人所有，本项目不包含其中任何内容。
 
-简体中文译文为本项目原创；`font.ckf` 由使用者本地字体生成，**不可随项目分发**——
-若要发布语言包，请改用 SIL OFL 授权字体重新生成（详见 [`I18N.md`](I18N.md)）。
+简体中文译文为本项目原创。源码仓库不含 `font.ckf`；官方 Release 的 Windows 构建包中
+附带一份由 **Noto Sans SC**（SIL OFL 1.1）生成的字库，许可见包内 `FONT-LICENSE.txt`。
+自行生成时请勿使用不可再分发的系统字体，详见 [`I18N.md`](I18N.md)。
 
 ---
 
