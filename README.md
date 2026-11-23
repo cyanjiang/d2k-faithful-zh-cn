@@ -1,216 +1,166 @@
-# d2k-faithful
+# d2k-faithful 简体中文版
 
-A faithful, open-source reimplementation of **Dune 2000** (Westwood Studios
-and Intelligent Games, 1998) for modern Windows and Linux. It plays the 1.06
-US game exactly as it was: the same intro, menus, briefings, missions,
-rules, AI and quirks, rebuilt from the original program, on the files from
-your own CD.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![English](https://img.shields.io/badge/文档-English-lightgrey.svg)](README.en.md)
 
-This project contains **no game data**. You need your own copy of Dune 2000.
+本项目是 [`Kyubey64/d2k-faithful`](https://github.com/Kyubey64/d2k-faithful) 的**简体中文汉化分支**。
+d2k-faithful 是用 C++20 / SDL3 从零重写的《沙丘 2000》（Dune 2000，Westwood Studios
+与 Intelligent Games，1998）开源复刻，在现代 Windows 和 Linux 上精确重现 1.06 美版的
+开场动画、菜单、简报、任务、规则、AI 乃至各种原版"特性"，全部基于你自己的正版游戏数据运行。
 
-| | |
-|---|---|
-| ![Main menu](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-menu.png) | ![Choosing a house](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-house.png) |
-| ![The campaign map](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-map.png) | ![A mission briefing](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-briefing.png) |
-| ![Atreides mission 1](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-mission.png) | ![Multiplayer over the LAN](https://github.com/Kyubey64/d2k-faithful/releases/download/v1.0.0/screen-multiplayer.png) |
+**本分支增加了简体中文支持**：一套默认关闭、可一键启用的外置语言包，覆盖菜单界面、单位名称、
+任务目标、战役简报、首次安装向导、显示设置向导、建造栏和工具栏提示等，**不改动任何经过
+哈希校验的 1.06 原版数据文件**。详见 [`I18N.md`](I18N.md)。
 
-*Screenshots of d2k-faithful running on the original game files. The
-artwork belongs to its owners; the images are hosted with the release,
-not in this repository.*
+> **本仓库不含任何游戏数据**。你需要自己持有《沙丘 2000》正版。
 
-## Status
-
-**1.0.0 is the single-player release.**
-
-| | |
-|---|---|
-| Campaigns | Atreides, Harkonnen and Ordos, every mission, briefing, movie and ending |
-| Skirmish | Practice games against up to five computer players |
-| Front end | The original menus, options, music and sound |
-| Saving | Save and load, as the original |
-| Multiplayer | Built and working, **not yet tested between real PCs** (see below) |
-| Platforms | Windows 10 / 11 (played on); Linux 64-bit (built and tested automatically, not yet played on a Linux desktop) |
-
-Not in 1.0.0: macOS, widescreen views, a map editor. The original's bugs
-are kept on purpose.
-
-## Why this project exists
-
-Dune 2000 still runs today only with help: DirectDraw wrappers, compatibility
-settings, unofficial patches and installers, and its network play depends on
-DirectPlay, which modern Windows no longer ships enabled. Each layer works
-for most people most of the time, and none of them is the game as it was.
-
-The goal here is simple: **double-click it, and it is the game you played in
-1998.** One program, your own game files, nothing installed in the system,
-nothing changed.
-
-## How it differs from other projects
-
-- **The original program is the reference.** Every number, timing, menu,
-  transition and AI decision was read out of the 1.06 executable (with
-  Ghidra) and written down before it was coded. About sixty findings notes
-  in [`docs/re/`](docs/re/) give the function addresses for each system;
-  [`docs/parity.md`](docs/parity.md) tracks every system against the
-  original with its evidence. Screens were compared pixel for pixel with
-  captures of the original game.
-- **No rebalancing.** Projects such as the OpenRA Dune 2000 mod rebuild the
-  game in another engine and change its rules and interface for modern
-  play. Here unit stats, economy, AI and even known bugs are the original's.
-  Display options exist (4:3 CRT stretch or square pixels, mouse capture)
-  but never show more of the map than the original did, since visible area
-  is part of the gameplay.
-- **Not a patched original.** Community editions keep the 1998 program and
-  wrap or patch it. This is a new program, so it needs no compatibility
-  modes, no DirectDraw wrapper, no DirectPlay and no administrator rights.
-- **Your own data, checked.** The setup reads your CD, ISO or installed
-  folder plus the official 1.06 patch, checks every file against the
-  1.06 originals, and keeps its own copy. No game files are in this
-  repository or its releases.
-
-## Multiplayer and DirectPlay
-
-The original game connected players through **DirectPlay 4** (IPX or
-TCP/IP on a LAN, modem and serial cable) and through Westwood's own internet
-lobby. Today IPX is gone from Windows, DirectPlay is a legacy feature that
-must be enabled by hand, and the Westwood servers closed long ago.
-
-d2k-faithful keeps everything the game itself decides: the lockstep
-simulation, the order delay, the sync check, the lobby screens, chat, and
-the rule that the lowest remaining player takes over when the host leaves.
-Only the transport underneath is new:
-
-- one player hosts, the others join **from the list of games found on the
-  LAN** or **by IP address** (one added box on the LAN lobby screen);
-- it uses **UDP port 1998**; all traffic goes through the host, no server
-  is involved;
-- over the internet the host needs UDP 1998 forwarded, or everyone can join
-  the same virtual LAN (Tailscale, ZeroTier and similar) and use its
-  addresses;
-- the Internet, Modem and Serial buttons are hidden, as the original does
-  when those services are not available;
-- every player needs the **same build** of d2k-faithful; it does not play
-  against the original Dune 2000.
-
-**Status:** multiplayer has been played between two copies on one PC and
-with Windows Sandbox, but not yet between separate PCs. Please report
-anything that goes wrong.
-
-## Getting started
-
-You need:
-
-- **Your Dune 2000 US CD**, as a disc, an ISO image of it, or an installed
-  Dune 2000 folder;
-- **the official 1.06 US patch**, `d2k106us.exe` (Westwood's free update
-  from 1998), unless your installed folder is already 1.06;
-- Windows 10 or 11 (64-bit), or a 64-bit Linux from 2022 or later
-  (glibc 2.35+, X11 or Wayland, PipeWire, PulseAudio or ALSA sound).
-
-Then:
-
-1. Download `d2k-faithful-1.0.0-windows-x64.zip` (or the Linux
-   `.tar.gz`) from the [releases page](https://github.com/Kyubey64/d2k-faithful/releases)
-   and unpack it anywhere.
-2. Start `d2k.exe` (Linux: `./d2k`). The program is not signed, so Windows
-   may show a SmartScreen warning: choose *More info*, then *Run anyway*.
-3. The first start opens a setup screen: **Add CD image**, **Add CD drive
-   or folder** (also for an installed game) and **Add patch**. An ISO or
-   patch lying next to the program is found by itself.
-4. When all 1,305 game files are found, press **Install**. Every file is
-   checked against the 1.06 originals and copied once (about 600 MB). The
-   CD, the ISO and the patch are not needed afterwards.
-
-The game then starts with the original intro.
-
-### Where things are kept
-
-| | Windows | Linux |
-|---|---|---|
-| Game data, settings, saves | `%APPDATA%\d2k-faithful\d2k\` | `~/.local/share/d2k-faithful/d2k/` |
-
-`settings.ini` holds the in-game options plus a few of ours. Delete the
-`gamedata` folder there to run the setup again.
-
-### Display setup (no command line needed)
-
-Double-click **`显示设置.bat`** next to `d2k.exe` to open a graphical wizard where
-you pick display mode (windowed/fullscreen), a resolution and the aspect ratio
-with the mouse. Choices are previewed live; **Save & Start** saves and plays,
-**Save & Quit** only saves. The same screen opens with `--display-setup`.
-During play, **F11** toggles fullscreen at any time.
-
-The wizard lists the resolutions your monitor actually supports (plus a
-"Desktop default" entry) and windowed mode also uses the chosen size. The
-640×400 picture is letterboxed, so any size works. Everything is saved to
-`settings.ini`; nothing on the command line is required.
-
-### Options
-
-The following are alternatives for scripting/automation; the wizard above is
-the easy way to set the display options.
-
-| Command line | `settings.ini` | Effect |
-|---|---|---|
-| `--aspect crt` / `--aspect square` | `aspect=` | The 640×400 picture stretched to 4:3 as on a 1998 monitor (default), or square pixels with integer scaling |
-| `--grab 1` / `--grab 0` | `mouse_grab=` | Keep the mouse inside the window |
-| `--fullscreen` / `--windowed` | `fullscreen=` | Run fullscreen or windowed; **F11** toggles at runtime (off by default) |
-| `--resolution WxH` / `--resolution desktop` | `display_width=` / `display_height=` | The fullscreen resolution: `WxH` picks the closest mode the monitor supports, `desktop` (the default) keeps the desktop's own one. The 640×400 picture is letterboxed at any size |
-| `--speed 0..100` | `game_speed=` | The game speed slider |
-| `--reset-intro` | `play_full_intro=1` | Play the full first-launch intro again |
-| `--data DIR` | | Use a ready 1.06 game folder instead of the game's own copy |
-| `--enhanced-movies 1` | `enhanced_movies=` | Show upscaled movie pictures you made yourself from your own movies (Windows; off by default; see [`docs/enhanced-movies.md`](docs/enhanced-movies.md)) |
-| `--lang zh-cn` | `lang=` | Optional localisation pack in `i18n/<lang>/` (off by default; see [`I18N.md`](I18N.md)) |
-| `--display-setup` | | Open the graphical display setup wizard (same as `显示设置.bat`) |
-
-These change only how the game is shown. Nothing alters the rules, and the
-visible map area is the original's.
-
-### Localisation
-
-An optional, **off-by-default** layer can show the UI, unit names, objectives and
-campaign briefings in other languages without touching the hash-checked 1.06
-data files. Enable it with `--lang zh-cn` (or `lang=zh-cn` in `settings.ini`);
-without that, the game stays in English. The build copies `i18n/` next to the
-executable automatically.
-
-The bundled `i18n/zh-cn/` pack was generated from a real 1.06 `text.uib`: 940
-translations covering every localisable display string (the ones still in English
-are proper names, internal mission ids and version numbers). It also covers the
-first-run setup wizard, the graphical display setup wizard and dynamically
-assembled lobby text. Long briefings and unit descriptions are translated too,
-with CJK-aware line wrapping.
-
-Regenerate from your own copy with
-`python tools/make_by_key.py` followed by
-`python tools/build_i18n.py --uib <your TEXT.UIB>`. Preview without launching:
-`d2k-tool ui-render <gamedir> MAINMENU out.png --lang zh-cn` for a menu, or
-`d2k-tool text-preview <gamedir> AM1Text2 out.png --lang zh-cn` for a briefing.
-See [`I18N.md`](I18N.md) for the pack format, font licensing notes and the
-remaining limitations.
-
-**Simplified Chinese screenshots** (rendered from real 1.06 game files):
+## 汉化效果预览
 
 | | | |
 |---|---|---|
-| ![Main menu](docs/screenshots/01-mainmenu-zh.png) | ![House selection](docs/screenshots/02-house-selection-zh.png) | ![Briefing](docs/screenshots/03-briefing-zh.png) |
-| ![Long briefing](docs/screenshots/04-long-briefing-zh.png) | ![Unit tooltip](docs/screenshots/05-tooltip-zh.png) | ![Display setup](docs/screenshots/06-display-setup-zh.png) |
+| ![主菜单](docs/screenshots/01-mainmenu-zh.png) | ![选择家族](docs/screenshots/02-house-selection-zh.png) | ![任务简报](docs/screenshots/03-briefing-zh.png) |
+| ![长篇简报](docs/screenshots/04-long-briefing-zh.png) | ![单位提示](docs/screenshots/05-tooltip-zh.png) | ![显示设置向导](docs/screenshots/06-display-setup-zh.png) |
 
-*The underlying game artwork belongs to its owners; these images only show
-this project's localisation layer.*
+*以上截图由真实 1.06 游戏文件渲染。底层游戏美术归其权利人所有，图片仅展示本项目的汉化层。*
 
-### Known, deliberate differences
+## 项目状态
 
-- The game runs on a fixed 60 Hz loop. The original was paced by the
-  monitor's refresh; its game speed (ticks per second) is reproduced
-  exactly.
-- Arithmetic uses standard 32-bit floats on every PC, so all players
-  compute the same game. The original's 1998 x87 precision is not
-  emulated, which can very rarely change a last digit.
+**1.0.0 为单人游戏版本。**
 
-## Building from source
+| 功能 | 状态 |
+|---|---|
+| 战役 | 亚崔迪、哈肯尼、奥多斯三族全部任务、简报、过场与结局 |
+| 遭遇战 | 对抗最多五个电脑玩家的练习局 |
+| 前端界面 | 原版菜单、选项、音乐与音效（含简体中文） |
+| 存档 | 与原版一致的保存与读取 |
+| 多人游戏 | 已实现并可运行，**尚未在真实的不同电脑间测试**（见下文） |
+| 平台 | Windows 10 / 11（已实际游玩）；Linux 64 位（自动构建与测试，尚未在Linux桌面实际游玩） |
 
-Windows: Visual Studio 2019 or later (C++ workload) and CMake 3.24+.
+1.0.0 不含：macOS、宽屏视野、地图编辑器。原版的 bug 被有意保留。
+
+## 为什么有这个项目
+
+《沙丘 2000》如今要运行起来，得靠一堆外围手段：DirectDraw 包装层、兼容性设置、非官方补丁和安装器；
+联机还依赖现代 Windows 默认不启用的 DirectPlay。这些方案大多时候能用，但没有一个是"当年那个游戏"本身。
+
+这里的目标很简单：**双击即玩，就是 1998 年你玩的那个游戏。** 一个程序，用你自己的游戏文件，
+不往系统里装任何东西，也不改动任何东西。
+
+## 与其他项目的区别
+
+- **以原版程序为基准。** 每个数值、时序、菜单、切换动画和 AI 决策，都先用 Ghidra 从 1.06 可执行文件
+  中读出并记录，再据此编码。[`docs/re/`](docs/re/) 下约六十篇逆向笔记给出每个系统的函数地址；
+  [`docs/parity.md`](docs/parity.md) 逐系统对照原版并记录证据。画面与原版逐像素比对。
+- **不做平衡性改动。** OpenRA 的沙丘 2000 模组在别的引擎里重建游戏，为现代玩法改变了规则和界面。
+  这里单位属性、经济、AI 甚至已知 bug 全部保持原版。显示选项（4:3 CRT 拉伸或方形像素、鼠标捕获）
+  存在，但绝不比原版显示更多地图区域，因为可见范围本身就是玩法的一部分。
+- **不是打补丁的原版。** 社区版本保留 1998 年的程序并包装或修改它。这是一个全新程序，因此不需要
+  兼容模式、DirectDraw 包装层、DirectPlay 或管理员权限。
+- **用你自己的数据，且经过校验。** 安装程序读取你的 CD、ISO 或已安装目录，加上官方 1.06 补丁，
+  把每个文件与 1.06 原件核对，然后保留自己的一份副本。本仓库及其 release 中不含任何游戏文件。
+
+## 多人游戏与 DirectPlay
+
+原版通过 **DirectPlay 4**（局域网 IPX 或 TCP/IP、调制解调器、串口线）以及 Westwood 自己的互联网大厅
+连接玩家。如今 IPX 已从 Windows 移除，DirectPlay 是需手动启用的遗留功能，Westwood 服务器也早已关闭。
+
+d2k-faithful 保留了游戏自身决定的一切：锁步模拟、指令延迟、同步校验、大厅界面、聊天，以及房主离开时
+由剩余最低序号玩家接管的规则。只有底层传输是新的：
+
+- 一人建主机，其他人**从局域网游戏列表**或**按 IP 地址**加入（局域网大厅界面新增的输入框）；
+- 使用 **UDP 1998 端口**；所有流量经主机中转，无需服务器；
+- 互联网游玩时主机需转发 UDP 1998，或所有人加入同一虚拟局域网（Tailscale、ZeroTier 等）并用其地址；
+- Internet、Modem、Serial 按钮被隐藏，正如原版在这些服务不可用时所做的那样；
+- 每位玩家都需要**相同构建版本**的 d2k-faithful，无法与原版《沙丘 2000》对战。
+
+**状态：** 多人游戏已在同一台电脑上的两个副本之间、以及 Windows 沙盒中测试过，但尚未在不同实体电脑间
+测试。遇到任何问题请报告。
+
+## 快速开始
+
+你需要：
+
+- **《沙丘 2000》美版 CD**（光盘、ISO 镜像，或已安装的游戏目录）；
+- **官方 1.06 美版补丁** `d2k106us.exe`（Westwood 1998 年的免费更新），除非你的安装目录已是 1.06；
+- Windows 10 或 11（64 位），或 2022 年之后的 64 位 Linux（glibc 2.35+、X11 或 Wayland、
+  PipeWire/PulseAudio/ALSA 音频）。
+
+然后：
+
+1. 从 [release 页面](https://github.com/cyanjiang/d2k-faithful-zh-cn/releases) 下载本分支的
+   Windows 或 Linux 构建包并解压到任意位置（若本分支尚无构建包，可从
+   [上游 releases](https://github.com/Kyubey64/d2k-faithful/releases) 下载后自行替换源码构建）。
+2. 运行 `d2k.exe`（Linux：`./d2k`）。程序未签名，Windows 可能弹出 SmartScreen 警告：
+   选择 *更多信息*，再点 *仍要运行*。
+3. 首次启动会打开安装向导：**添加 CD 镜像**、**添加 CD 驱动器或目录**（也适用于已安装游戏）、
+   **添加补丁**。放在程序旁的 ISO 或补丁会被自动发现。
+4. 找齐全部 1,305 个游戏文件后点 **安装**。每个文件都会与 1.06 原件核对并复制一次（约 600 MB）。
+   之后就不再需要 CD、ISO 和补丁。
+
+随后游戏会以原版开场动画启动。
+
+### 文件存放位置
+
+| | Windows | Linux |
+|---|---|---|
+| 游戏数据、设置、存档 | `%APPDATA%\d2k-faithful\d2k\` | `~/.local/share/d2k-faithful/d2k/` |
+
+`settings.ini` 保存游戏内选项以及本项目的附加选项。删除其中的 `gamedata` 目录可重新运行安装向导。
+
+### 显示设置（无需命令行）
+
+双击 `d2k.exe` 旁边的 **`显示设置.bat`**，即可打开图形向导，用鼠标选择显示模式（窗口/全屏）、
+分辨率和画面比例。选择会实时预览；**保存并开始** 保存并进入游戏，**保存并退出** 只保存设置。
+命令行 `--display-setup` 也可打开同一界面。游戏进行中随时按 **F11** 切换全屏。
+
+向导会列出显示器实际支持的所有分辨率（外加"桌面默认分辨率"），窗口模式也采用所选尺寸。
+640×400 的画面会按比例留黑边，因此任意尺寸都能正常显示。所有设置写入 `settings.ini`，
+完全不需要敲命令行。
+
+### 命令行选项
+
+以下为脚本/自动化用途的替代方式，普通用户用上面的图形向导即可。
+
+| 命令行 | `settings.ini` | 作用 |
+|---|---|---|
+| `--aspect crt` / `--aspect square` | `aspect=` | 640×400 画面按 1998 年显示器拉伸为 4:3（默认），或以方形像素整数缩放 |
+| `--grab 1` / `--grab 0` | `mouse_grab=` | 把鼠标限制在窗口内 |
+| `--fullscreen` / `--windowed` | `fullscreen=` | 全屏或窗口运行；**F11** 可运行时切换（默认关闭） |
+| `--resolution WxH` / `--resolution desktop` | `display_width=` / `display_height=` | 全屏分辨率：`WxH` 选显示器最接近的模式，`desktop`（默认）沿用桌面分辨率 |
+| `--speed 0..100` | `game_speed=` | 游戏速度滑块 |
+| `--reset-intro` | `play_full_intro=1` | 重新播放完整的首次开场动画 |
+| `--data DIR` | | 使用现成的 1.06 游戏目录，而非程序自己的副本 |
+| `--enhanced-movies 1` | `enhanced_movies=` | 显示由你自己的影片制作的增强画面（Windows；默认关闭；见 [`docs/enhanced-movies.md`](docs/enhanced-movies.md)） |
+| `--lang zh-cn` | `lang=` | 启用 `i18n/<lang>/` 中的可选语言包（默认关闭；见 [`I18N.md`](I18N.md)） |
+| `--display-setup` | | 打开图形显示设置向导（同 `显示设置.bat`） |
+
+这些选项只改变游戏的呈现方式，不影响规则，可见地图区域始终与原版一致。
+
+## 简体中文本地化
+
+本分支的中文层**默认关闭**，可在不触碰经过哈希校验的 1.06 数据的前提下，用中文显示界面、
+单位名称、任务目标与战役简报。通过 `--lang zh-cn`（或在 `settings.ini` 中设置 `lang=zh-cn`）启用；
+不启用则保持英文。构建时会自动把 `i18n/` 复制到可执行文件同级目录。
+
+随附的 `i18n/zh-cn/` 语言包由真实 1.06 的 `text.uib` 生成，含 **940 条译文**，覆盖所有可本地化的
+显示文本（仍为英文的是专有名词、内部任务标识和版本号）。它还覆盖首次安装向导、图形显示设置向导、
+联机大厅动态拼接文本、建造栏与工具栏提示。长篇简报和单位描述同样已翻译，并采用针对中文的换行处理。
+
+你可以从自己的游戏副本重新生成：先运行 `python tools/make_by_key.py`，再运行
+`python tools/build_i18n.py --uib <你的 TEXT.UIB>`。不启动游戏也能预览：
+`d2k-tool ui-render <gamedir> MAINMENU out.png --lang zh-cn` 预览菜单，
+`d2k-tool text-preview <gamedir> AM1Text2 out.png --lang zh-cn` 预览简报。
+语言包格式、字体许可说明和现存限制见 [`I18N.md`](I18N.md)。
+
+### 已知的有意差异
+
+- 游戏以固定 60 Hz 循环运行。原版由显示器刷新率驱动，其游戏速度（每秒 tick 数）被精确复现。
+- 所有 PC 使用标准 32 位浮点运算，保证联机各方计算一致；不模拟 1998 年 x87 的精度，
+  这极少数情况下可能改变最后一位小数。
+
+## 从源码构建
+
+Windows：Visual Studio 2019 或更高版本（C++ 工作负载）与 CMake 3.24+。
 
 ```
 cmake -S . -B build -A x64
@@ -219,28 +169,32 @@ build/bin/Release/d2k_tests.exe
 cd build && cpack -G ZIP -C Release
 ```
 
-Linux: the build environment is `tools/ci/linux.Dockerfile` (Ubuntu
-22.04, GCC 12; the package list there also works natively):
+若本机没有 "Developer Command Prompt"，可使用 `bash tools/rebuild.sh d2k` 快速增量构建
+（脚本会自行设置 MSVC 环境变量）。
+
+Linux：构建环境见 `tools/ci/linux.Dockerfile`（Ubuntu 22.04、GCC 12；其中的软件包列表也可原生使用）：
 
 ```
 docker build -t d2k-linux -f tools/ci/linux.Dockerfile tools/ci
 docker run --rm -v "$PWD:/src:ro" -v "$PWD/build:/build" d2k-linux
 ```
 
-SDL3 and doctest are fetched from source at pinned versions. Tests that
-need the game data look for it in `gamedata/1.06` and skip themselves
-without it. How the original works, function by function, is in
-`docs/re/`; progress is tracked in `docs/parity.md`; what the project
-taught us is in `docs/lessons-learned.md`.
+SDL3 和 doctest 以固定版本从源码获取。需要游戏数据的测试会在 `gamedata/1.06` 中查找，
+找不到则自行跳过。原版各系统如何工作见 [`docs/re/`](docs/re/)，进度见 [`docs/parity.md`](docs/parity.md)，
+项目经验总结见 [`docs/lessons-learned.md`](docs/lessons-learned.md)。
 
-The project was developed with the help of Claude Code, an AI coding
-assistant; `CLAUDE.md` holds the working rules it followed.
+本项目在开发过程中使用了 AI 编程助手 Claude Code；[`CLAUDE.md`](CLAUDE.md) 记录了其遵循的工作规范。
 
-## Legal
+## 法律声明
 
-d2k-faithful is free software under the GNU General Public License v3.0
-(`LICENSE`). It uses SDL3 under the zlib license (`LICENSE-SDL3.txt` in the release
-packages).
-It is not affiliated with or endorsed by Electronic Arts, Westwood Studios
-or Intelligent Games. Dune 2000 and its content belong to their owners;
-this project ships none of it.
+d2k-faithful 依据 GNU General Public License v3.0 发布（见 [`LICENSE`](LICENSE)），
+并使用 zlib 许可下的 SDL3（发布包中的 `LICENSE-SDL3.txt`）。
+本项目与 Electronic Arts、Westwood Studios 或 Intelligent Games 无隶属或背书关系。
+《沙丘 2000》及其内容归权利人所有，本项目不包含其中任何内容。
+
+简体中文译文为本项目原创；`font.ckf` 由使用者本地字体生成，**不可随项目分发**——
+若要发布语言包，请改用 SIL OFL 授权字体重新生成（详见 [`I18N.md`](I18N.md)）。
+
+---
+
+完整英文说明见 [README.en.md](README.en.md)。
